@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Datas</title>
+    <style>
+        h1 {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Tempo</h1>
+    <form id="form_date" method="POST" action="{% url 'testes:calculator_date' %}">
+        {% csrf_token %}
+        <label for="data_inicial">data_inicial</label>
+        <input id="data_inicial" name="data_inicial" type="date">
+        <label for="data_final">data_final</label>
+        <input id="data_final" name="data_final" type="date">
+        <button type="submit">calcular</button>
+    </form>
+</body>
+</html>
